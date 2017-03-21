@@ -97,6 +97,10 @@ namespace XamarinAllianceApp.Views
                 }
             }
         }
+        async void OnNextPageButtonClicked (object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new CharDetail());
+        }
     }
 }
 

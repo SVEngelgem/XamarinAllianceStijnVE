@@ -21,12 +21,13 @@
     <ListView x:Name="characterList"
 				IsPullToRefreshEnabled="true" Refreshing="OnRefresh"
         HasUnevenRows="true"
-				Grid.Row="1">
+				Grid.Row="1"
+        ItemSelected="OnNextPageButtonClicked">
       <ListView.ItemTemplate>
         <DataTemplate>
           <ViewCell>
             <StackLayout HorizontalOptions="Start" Orientation="Vertical" Padding="15,5,5,15" >
-                <Label Text="{Binding Name}" FontAttributes="Bold" />
+                <Label Text="{Binding Name}" FontAttributes="Bold"/>
                 <Label Text="{Binding Biography}" />
             </StackLayout>
           </ViewCell>
